@@ -254,7 +254,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -105.75, 146.136169, 72.0, 20.0 ],
-					"text" : "loadmess 0"
+					"text" : "loadmess 1"
 				}
 
 			}
@@ -4937,30 +4937,30 @@
 			"obj-48" : [ "flonum[21]", "flonum", 0 ],
 			"obj-19" : [ "toggle[23]", "toggle[1]", 0 ],
 			"obj-123" : [ "gain~[13]", "gain~[2]", 0 ],
-			"obj-52" : [ "toggle[24]", "toggle", 0 ],
+			"obj-17" : [ "gain~[14]", "gain~", 0 ],
 			"obj-2" : [ "toggle[22]", "toggle[10]", 0 ],
-			"obj-18" : [ "flonum[19]", "flonum[2]", 0 ],
-			"obj-17" : [ "gain~[14]", "gain~", 0 ]
+			"obj-52" : [ "toggle[24]", "toggle", 0 ],
+			"obj-18" : [ "flonum[19]", "flonum[2]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "grooveduck2.maxpat",
 				"bootpath" : "/Applications/Max6/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
-				"patcherrelativepath" : "../../../../../Applications/Max6/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
+				"patcherrelativepath" : "../../../../../../Applications/Max6/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fft.maxpat",
 				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
-				"patcherrelativepath" : "../../../Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
+				"patcherrelativepath" : "../../../../Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "closeness.js",
-				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath",
-				"patcherrelativepath" : "../../../Documents/Max_Enabled/Stuff_for_searchpath",
+				"bootpath" : "/Users/derekrazo/Desktop/Dev/open-loop-studio/abstractions",
+				"patcherrelativepath" : "",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
