@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 595.0, 199.0, 640.0, 480.0 ],
@@ -27,6 +28,29 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "meter~",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 120.199997, 367.0, 12.0, 58.0 ],
+					"presentation_rect" : [ 124.0, 367.5, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 200.0, 88.5, 58.0, 58.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -63,7 +87,6 @@
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 112.199997, 32.5, 20.0, 114.0 ],
-					"presentation_rect" : [ 122.199997, 32.5, 0.0, 0.0 ],
 					"size" : 8.0
 				}
 
@@ -77,7 +100,6 @@
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 142.5, 32.5, 20.0, 114.0 ],
-					"presentation_rect" : [ 182.199997, 33.5, 0.0, 0.0 ],
 					"size" : 8.0
 				}
 
@@ -105,7 +127,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 250.0, 373.0, 175.0, 33.0 ],
+					"patching_rect" : [ 250.0, 373.0, 176.0, 33.0 ],
 					"text" : "Reminder: Set scripting names and stuff in the inspector"
 				}
 
@@ -132,7 +154,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 328.5, 101.0, 167.0, 33.0 ],
-					"presentation_rect" : [ 382.0, 100.0, 0.0, 0.0 ],
 					"text" : "         Support Contact:          \n    derekrazo@gmail.com"
 				}
 
@@ -146,7 +167,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 328.5, 72.0, 164.0, 20.0 ],
+					"patching_rect" : [ 328.5, 72.0, 167.0, 20.0 ],
 					"text" : "A basic unit for live sampling. "
 				}
 
@@ -162,7 +183,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 250.0, 285.0, 324.0, 74.0 ],
-					"presentation_rect" : [ 372.0, 259.0, 0.0, 0.0 ],
 					"text" : "Additional Dependencies:\n\nMMJ depot-\n\nhttp://cnmat.berkeley.edu/library/max_msp_jitter_depot"
 				}
 
@@ -178,7 +198,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 431.0, 147.0, 162.0, 127.0 ],
-					"presentation_rect" : [ 378.0, 251.0, 0.0, 0.0 ],
 					"text" : "To-Do:\n\n-Add cue points\n-fix clipping when   \n modulating buffer\n-\n-\n-\n-"
 				}
 
@@ -193,7 +212,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 321.5, 28.0, 178.0, 34.0 ],
+					"patching_rect" : [ 321.5, 28.0, 179.0, 34.0 ],
 					"text" : "Sampler.node "
 				}
 
@@ -270,16 +289,25 @@
 					"id" : "obj-3",
 					"maxclass" : "bpatcher",
 					"name" : "sampler.node.maxpat",
-					"numinlets" : 11,
+					"numinlets" : 13,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "float", "" ],
-					"patching_rect" : [ 69.0, 162.0, 166.0, 182.0 ],
+					"patching_rect" : [ 65.25, 160.0, 166.0, 182.0 ],
 					"varname" : "buff1"
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 11 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 6 ],
 					"disabled" : 0,
@@ -344,6 +372,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -356,7 +393,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 26.5, 153.0, 78.5, 153.0 ],
+					"midpoints" : [ 26.5, 153.0, 74.75, 153.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -381,41 +418,41 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-55" : [ "flonum[20]", "flonum[1]", 0 ],
+			"obj-3::obj-17" : [ "gain~[14]", "gain~", 0 ],
 			"obj-3::obj-48" : [ "flonum[21]", "flonum", 0 ],
 			"obj-3::obj-19" : [ "toggle[23]", "toggle[1]", 0 ],
-			"obj-3::obj-123" : [ "gain~[13]", "gain~[2]", 0 ],
 			"obj-3::obj-52" : [ "toggle[24]", "toggle", 0 ],
+			"obj-3::obj-123" : [ "gain~[13]", "gain~[2]", 0 ],
 			"obj-3::obj-18" : [ "flonum[19]", "flonum[2]", 0 ],
-			"obj-3::obj-2" : [ "toggle[22]", "toggle[10]", 0 ],
-			"obj-3::obj-17" : [ "gain~[14]", "gain~", 0 ]
+			"obj-3::obj-55" : [ "flonum[20]", "flonum[1]", 0 ],
+			"obj-3::obj-2" : [ "toggle[22]", "toggle[10]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "sampler.node.maxpat",
-				"bootpath" : "/Users/derekrazo/Desktop/Dev/open-loop-studio",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath/open-loop-studio-master/abstractions",
+				"patcherrelativepath" : "../../../../Documents/Max_Enabled/Stuff_for_searchpath/open-loop-studio-master/abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grooveduck2.maxpat",
-				"bootpath" : "/Applications/Max6/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
-				"patcherrelativepath" : "../../../../../Applications/Max6/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
+				"bootpath" : "/Applications/Max 6.1/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
+				"patcherrelativepath" : "../../../../../../Applications/Max 6.1/examples/sequencing-looping/audio-rate-sequencing-looping/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fft.maxpat",
 				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
-				"patcherrelativepath" : "../../../Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
+				"patcherrelativepath" : "../../../../Documents/Max_Enabled/Stuff_for_searchpath/Extras_yo/free elastic",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "closeness.js",
-				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath",
-				"patcherrelativepath" : "../../../Documents/Max_Enabled/Stuff_for_searchpath",
+				"bootpath" : "/Users/derekrazo/Documents/Max_Enabled/Stuff_for_searchpath/open-loop-studio-master/abstractions",
+				"patcherrelativepath" : "../../../../Documents/Max_Enabled/Stuff_for_searchpath/open-loop-studio-master/abstractions",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
